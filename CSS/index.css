@@ -1,0 +1,170 @@
+#hov:hover{
+   background-color: beige;
+   border-radius: 30px;
+   cursor: pointer; 
+}
+#hov{
+    background-color: beige;
+    border-radius: 8px;
+}
+.icon{
+    background-color:rgb(236, 232, 232);
+    padding: 10px;
+    border-radius:12px;
+    margin-right: 1px;
+
+}
+/* align the services item */
+
+.list{
+ display: flex;
+ text-wrap:nowrap;
+ font-size: smaller;
+ justify-content: center;
+ align-items: center;
+}
+.g:hover{
+  
+  background-color: rgb(74, 119, 215);
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  
+
+}
+/* sidebar */
+.sidebar>ul{
+   list-style: none;
+   line-height: 40px;
+}
+.sidebar>ul>li:hover{
+    background-color: rgb(221, 231, 234);
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(92, 160, 215) ;
+    font-weight: 600;
+}
+.li_head{
+    line-height: 60px;
+}
+.sidebar>ul>li{
+    left: 0;
+}
+/* information list */
+.iconinfo1{
+    background-color:rgb(235, 214, 187);
+    padding: 20px;
+    border-radius:12px;
+    margin-top: 5px;
+}
+.iconinfo2{
+    background-color:rgb(230, 226, 236);
+    padding: 20px;
+    border-radius:12px;
+    margin-top: 5px;
+}
+.iconinfo3{
+    background-color:rgb(204, 230, 234);
+    padding: 20px;
+    border-radius:12px;
+    margin-top: 5px;
+}
+.iconinfo4{
+    background-color:rgb(201, 174, 198);
+    padding: 20px;
+    border-radius:12px;
+    margin-top: 5px;
+}
+.iconinfo5{
+    background-color:rgb(214, 183, 164);
+    padding: 20px;
+    border-radius:12px;
+    margin-top: 5px;
+}
+.iconinfo6{
+    background-color:rgb(157, 193, 162);
+    padding: 20px;
+    border-radius:12px;
+    margin-top: 5px;
+}
+.iconinfo7{
+    background-color:rgb(201, 174, 198);
+    padding: 20px;
+    border-radius:12px;
+    margin-top: 5px;
+}
+.iconinfo8{
+    background-color:rgb(210, 196, 187);
+    padding: 20px;
+    border-radius:12px;
+    margin-top: 5px;
+}
+/* create box  */
+.info{
+    border-radius: 20px;
+    height:130px;
+    padding: 20px;
+}
+.info1{
+    border-radius: 20px;
+    height: 130px;
+    padding: 20px;
+    width: 198px;
+}
+.mainside{
+    position: relative;
+}
+.chid{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 280px;
+}
+.fontsm{
+    font-size: x-small;
+    margin-left: 60px;
+     }
+.fontsm2{
+    font-size: x-small;
+    margin-left: 30px;
+     }
+
+     .graph{
+        position: absolute;
+        margin-top: 317px;
+        width: 410px;
+        margin-left: 310px;
+        border-radius: 20px;
+        height: 450px;
+     } 
+     .piechart{
+        position: absolute;
+        margin-top: 317px; 
+        height: 450px;
+        width: 410px;
+        margin-left: 740px;
+        border-radius: 20px;
+
+     }
+
+     .footer{
+        position: absolute;
+        width:850px;
+        margin-left: 310px;
+        margin-top: 790px;
+        border-radius: 20px;
+
+     }
+  .li{
+    list-style: none;
+    display: inline-flex;
+    gap: 5px;
+  }
+  .il{
+    list-style: none;
+    display: inline-flex;
+    gap:15x;
+    
+  }
+  .sales-li{
+    list-style: none;
+  }

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- boostrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css navbar link external -->
+    <link rel="stylesheet" href="../CSS/index.css">
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- curving graph script -->
+
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Day','Last Week','This Week'],
+            ['Sun',30,10],
+            ['Mon',20,45],
+            ['Tue',40,30],
+            ['Wed',35,70],
+            ['Thu',50,55],
+            ['Fri',25,75],
+            ['sat',50,55]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+<body style="background-color: rgb(239, 231, 231);">
+    <!-- navbar -->
+      <div class="container-fluid mt-2" >
+       <div class="nav-bar bg-white p-1 shadow " style="border-radius: 10px 10px 0 0;">
+        <div class="row">
+            <!-- logo and name -->
+            <div class="col-2">
+                 <div class="float-start">
+                  <i class="fa-solid fa-layer-group fa-2xl ms-4 border border-primary p-4" style="color: #74C0FC; margin-top: 8px; border-radius: 15px; background-color: #c6ddef;" ></i>
+                 </div>
+                 <p class="text-center mt-1" style="color:  rgb(92, 160, 215); ;">Olivia <br> Miller</p>
+            </div>
+            <!-- input search box --> 
+            <div class="col-3 border-start mt-3">
+                <input type="text" class="form-control" style="background-color: rgb(237, 237, 237);" placeholder="&#x1F50E; &nbsp; Search Dashboard...">
+            </div>
+            <!-- company dropdown -->
+            <div class="col-4 border-end mt-3">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" style="color: rgb(92, 160, 215); background-color: white; border-right: none;" >Switch company</span>
+                    </div>
+                <div class="col">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle form-control"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Oliver Miller
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">salesqueenoffice</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div> 
+           </div> 
+           <!-- profile dropdown -->
+           <div class="col-2">
+             <div class="float-start">
+              <img src="../IMAGE/profile image.jpeg" alt="icon" class="border mt-2" width="50" height="45" style="border-radius: 18px;" >
+              </div>
+            <p class="mt-1 text-center">Welcome back, <br><span style="color: rgb(92, 160, 215); ;">Yossi!</span> </p>
+           </div>
+           <div class="col  mt-3">
+            <select  class="border-0 " disabled id="hov">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>  
+    </div>
+    </div>
+
+    <!-- list of services -->
+      <div class="container-fluid list bg-white mt-3 shadow p-3 " style="width: 1200px; border-radius: 20px;">
+        <div class="row m">   
+          <div class="col g" style="background-color: #74C0FC;padding: 8px; border-radius: 10px;"><span><i class="fa-solid fa-gauge-simple-high icon"></i></span>Dashboard</div>
+          <div class="col g"><span><i class="fa-solid fa-circle-plus icon "></i></span>Receivables</div>
+          <div class="col g"><span><i class="fa-solid fa-circle-arrow-left icon"></i></span>Returns</div>
+          <div class="col g"><span><i class="fa-regular fa-user icon "></i></span> Customers</div>
+          <div class="col g"><span><i class="fa-regular fa-credit-card icon "></i></span>payable</div>
+          <div class="col g"><span><i class="fa-solid fa-dollar-sign icon "></i></span> sales</div>
+          <div class="col g"><span><i class="fa-solid fa-list icon"></i></span>inventory</div>
+          <div class="col g"><span><i class="fa-solid fa-arrow-down icon "></i></span>Imports</div>
+          <div class="col g"><span><i class="fa-solid fa-tag icon me-1 "></i></span> Ticket</div>
+          <div class="col g"><span><i class="fa-solid fa-right-left icon "></i></i></span>EDI</div>
+          <div class="col g"><span><i class="fa-solid fa-location-dot icon "></i></span> Showroom</div>
+        </div>
+      </div>
+       <!-- side bar -->
+       <div class="container  mt-3 ">
+       <div class="row mainside ">
+        <div class="col-3 bg-white sidebar" style="border-radius: 20px;">
+          <ul>
+            <header class="ms-2 li_head" style="font-weight: 800;"><i class="fa-solid fa-chart-line border border-primary p-2" style="width: 40px; height: 30px; border-radius: 10px; background-color: #74C0FC;"></i>&nbsp;Reports</header>
+            <li>Company Snapshot</li>
+            <li>Open Order Report</li>
+            <li>
+              <div class="btn-group dropend">
+                <button type="button" class="btn  dropdown-toggle sidebutton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Cut & Sold Lockup
+                </button>
+                <ul class="dropdown-menu">
+                  <!-- Dropdown menu links -->
+                  <li class="dropdown-item">list1</li>
+                  <li class="dropdown-item">list2</li>
+                  <li class="dropdown-item">list3</li>
+                </ul>
+              </div>
+            </li>
+            <li>Inventory Snapshot</li>
+            <li>Blanace to Sell Sales Summary</li>
+            <li>Open Orders to Pickup</li>
+            <li>Period Comparsion Report</li>
+            <li>SR Availability</li>
+            <li>Sales Form all Report</li>
+            <li>Detailed Period Comparsion Report </li>
+            <li>Style CastReport</li>
+            <li>Style Cost Report (sales persons)</li>
+            <li>Shiping/Receiving Log</li>
+            <li>Receiving Summary</li>
+            <li>Style Availability BY Date</li>
+            <li>Purchase Order Report</li>
+            <li>Shiping Report</li>
+            <li>Traffic Report</li>
+            <li>Image Cut & Sold Report</li>
+            <li>Style Sheet</li>
+          </ul>
+        </div>
+        <!-- information -->
+         <div class="col  ms-3 info " style="background-color:rgba(250, 250, 250, 0.975);"><i class="fa-solid fa-dollar-sign fa-xl iconinfo1" style="color: #FFD43B;"></i>$32,350.00 <br> <span class="fontsm">Total Revenve </span></div>
+         <div class="col  ms-3 info" style="background-color:rgba(250, 250, 250, 0.975);"><i class="fa-solid fa-arrow-right  fa-xl iconinfo2" style="color: #B197FC; --fa-rotate-angle: 300deg;"></i>$6000 <br> <span class="fontsm">Total Expenses </span></div>
+         <div class="col  ms-3 info "style="background-color:rgba(250, 250, 250, 0.975);"><i class="fa-regular fa-credit-card fa-xl iconinfo3"  style="color: #74C0FC;"></i>$56,03.00 <br> <span class="fontsm">Accounts Receivable </span></div>
+         <div class="col  ms-3 info" style="background-color:rgba(250, 250, 250, 0.975);"><i class="fa-regular fa-credit-card fa-xl iconinfo4" style="color: #d61fb8;"></i>$67,083.00 <br> <span class="fontsm">Accounts payable</span></div>
+         <div class="row chid ">
+         <div class="col-2  ms-3 info1" style="background-color:rgba(250, 250, 250, 0.975);"><i class="fa-solid fa-image fa-xl iconinfo5" style="color: #c96718;"></i>3,478 <br> <span class="fontsm2">Items missing images</span></div>
+         <div class="col-2  ms-3 info1" style="background-color:rgba(250, 250, 250, 0.975);"><i class="fa-solid fa-dollar-sign fa-xl iconinfo6" style="color: #6cb44b;"></i>237 <br> <span class="fontsm2">Items missing FOB costs </span></div>
+         <div class="col-2  ms-3 info1" style="background-color:rgba(250, 250, 250, 0.975);"><i class="fa-solid fa-dollar-sign fa-xl iconinfo7" style="color: #d61fb8;"></i>160<br> <span class="fontsm2">Po items missing costs </span></div>
+         <div class="col-2  ms-3 info1" style="background-color:rgba(250, 250, 250, 0.975);"><i class="fa-solid fa-mobile-screen fa-xl iconinfo8" style="color: #FFD43B;"></i>0/$0.00 <br> <span class="fontsm2">Booked </span></div>
+         </div>
+          <!-- graph -->
+         <!-- first row -->
+         <div class="row bg-white p-3 graph">
+          <div class="col">
+          <ul class="li">
+            <li><b>Invoices</b></li>
+            <li style="font-size: small;" class="mt-1">invocing from</li>
+            <li class="ms-2"><select class="form-control text-primary">
+              <option value="" >01/23/22-02/05/22</option>
+            </select></li>
+          </ul>
+          <div class="col ms-3 mt-2">
+          <li class="il"><div style="width: 25px; height: 20px; border-radius: 20px; background-color: rgb(187, 25, 25);"></div><span style="font-size: small;"> This week</span></li>&nbsp;&nbsp;&nbsp;
+          <li class="il"><div style="width: 25px; height: 20px; border-radius: 20px; background-color: rgb(60, 133, 158);" style="font-size: small;"></div><span style="font-size: small;"> Last week</span></li>
+          </div>
+         </div>
+         <!-- curving chart -->
+         <div id="curve_chart" style="width: 900px; height: 300px"></div>
+         </div>
+         <!-- pie char -->
+         <div class="row bg-white p-3 piechart ">
+          <div class="col">
+            <ul>
+              <li class="sales-li"><b>Sales Forcast</b></li>
+            </ul>
+            <!-- check box -->
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label " for="inlineCheckbox1" style="font-size: small;">Daily</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" checked value="option2">
+              <label class="form-check-label" for="inlineCheckbox2" style="font-size: small;">Weekly</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+              <label class="form-check-label" for="inlineCheckbox3" style="font-size: small;">Monthly</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+              <label class="form-check-label" for="inlineCheckbox3" style="font-size: small;">Quartely</label>
+            </div>
+            <!-- two color -->
+
+            <div class="col mt-3">
+              <li class="il mt-2"><div style="width: 25px; height: 20px; border-radius: 20px; background-color: rgb(51, 44, 148);"></div><span style="font-size: small;">Weighted</span></li>&nbsp;&nbsp;
+              <li class="il mt-2"><div style="width: 25px; height: 20px; border-radius: 20px; background-color: rgb(244, 247, 74);" style="font-size: small;"></div><span style="font-size: small;">Won</span></li>
+              <li style="font-size: small;" class="il ms-2">From</li>
+              <li class="il"><select class="form-control text-primary">
+                <option value="" >01/23/22-02/05/22</option>
+              </select></li>
+              </div>
+              <!-- chart -->
+              <img src="../IMAGE/digram.png" alt="image" width="300px" height="200px" style="margin-top: 40px;" >
+          
+          </div>
+         </div>
+         <!-- footer -->
+         <div class="row bg-white p-5 footer ">
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <div class="spinner-border text-info" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <strong class="ms-2">Loading more...</strong>
+            </div>
+          </div>
+         </div>
+         </div>
+        </div>
+    <!-- boostrap javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
